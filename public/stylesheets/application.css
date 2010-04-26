@@ -1,5 +1,6 @@
 body {
 	color:white;
+	font-weight:bold;
 /*	background:#abcfd6;
 */}
 
@@ -38,4 +39,8 @@ label {
 	display:block;
 	font-size:3em;
 	margin-bottom:0.5em;
+}
+
+#pwdTest {
+	font-size:2em;
 }

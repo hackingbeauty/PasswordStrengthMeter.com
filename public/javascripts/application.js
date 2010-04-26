@@ -30,7 +30,6 @@ $(document).ready (function() {
 
 	PSM.externalLinks();
 	PSM.passwordMeterCheck();
-	
-	// , :onkeyup => 'testPasswordCss(document.forms.password_meter_form.password.value);'
+	$("#password").focus();
 	
 });
