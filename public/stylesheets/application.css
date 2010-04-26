@@ -1,1 +1,24 @@
-.container {border:1px solid red;}
+.container {
+	margin-top:5em;
+}
+
+form {
+	width:650px;
+	margin:0 auto;
+}
+
+input {
+  border-left: 1px solid #838383;
+  border-top: 1px solid #838383;
+  color: #404048;
+  display: block;
+  font-size: 3.8em;
+  margin-bottom: 0.8em;
+  padding: 0.2em; }
+
+label {
+	color:#404048;
+	display:block;
+	font-size:3em;
+	margin-bottom:0.5em;
+}
