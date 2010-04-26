@@ -28,7 +28,9 @@ input {
   display: block;
   font-size: 3.8em;
   margin-bottom: 0.8em;
-  padding: 0.2em; }
+  padding: 0.2em; 
+	width:628px;
+}
 
 label {
 /*	color:#404048;
