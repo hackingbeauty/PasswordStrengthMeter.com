@@ -8,18 +8,23 @@
     %link{ :href => "stylesheets/application.css", :rel => "stylesheet", :media => "screen", :type => "text/css" }
   %body
     .container
-      %form{:id => 'password_meter_form', :method=>'', :action=>''}
-        %label
-          Enter a Password:
-        %input{:type=>'password', :name=>'password', :id => 'password'}
-        #checkmark
-        #pwdTest
-          Password Strength:
-          %span#meterEmpty
-          %span#meterFull
-          %span#Words
+      #main_content
+        %form{:id => 'password_meter_form', :method=>'', :action=>''}
+          %label
+            Enter a Password:
+          %input{:type=>'password', :name=>'password', :id => 'password'}
+          #checkmark
+          #pwdTest
+            Password Strength:
+            %span#meterEmpty
+            %span#meterFull
+            %span#Words
+      #footer
+        %a{:title => "From Thought 2 Web Network", :href => "http://fromthought2web.com", :rel => "external"}
+          © 2010 From Thought 2 Web Network
     %script{:src => "javascripts/jquery-1.4.2.min.js", :type => "text/javascript"}
     %script{:src => "javascripts/password-meter.js", :type => "text/javascript"}
     %script{:src => "javascripts/application.js", :type => "text/javascript"}
+
 
 

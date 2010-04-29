@@ -1,10 +1,24 @@
 body {
 	color:white;
 	font-weight:bold;
-/*	background:#abcfd6;
-*/}
+}
+
+a {
+	text-decoration:none;
+	color:#f2b614;
+	font-weight:bold;
+}
+
+a:hover {
+	color:#85b3e6;
+	text-decoration:underline;
+}
 
 .container {
+
+}
+
+#main_content {
 	margin-top:5em;
 	border:5px solid #85b3e6;
 	-moz-border-radius:10px;
@@ -27,6 +41,7 @@ input#password {
   margin-bottom: 0.8em;
   padding: 0.2em 0.2em 0.3em 0.2em; 
 	width:628px;
+	background: #ffffff url('/images/meter_input_sprite.png') 0px 0px repeat-x;
 }
 
 label {
@@ -38,11 +53,12 @@ label {
 
 #pwdTest {
 	font-size:2em;
+	margin-top:-0.5em;
 }
 
 #Words {
 	font-weight:bold;
-	text-decoration:underline;
+	font-style:italic;
 }
 
 #checkmark{
@@ -53,4 +69,8 @@ label {
 	right:4em;
 	top:8.4em;
 	background: url('/images/checkmark.png') 0 0 no-repeat;
+}
+
+#footer {
+	margin-top:5em;
 }

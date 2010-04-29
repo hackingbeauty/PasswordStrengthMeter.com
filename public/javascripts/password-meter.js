@@ -118,10 +118,7 @@ function testPasswordCss(passwd)
 		var intScore   = 0
 		var strVerdict = 0
 		
-		var password_input_box = document.getElementById("password");
-		password_input_box.style.backgroundImage = "url('/images/meter_input_sprite.png')";
-		password_input_box.style.backgroundPosition = "0 0";
-		
+		var password_input_box = document.getElementById("password");		
 		var checkmark = document.getElementById("checkmark");
 		
 		// PASSWORD LENGTH
@@ -207,13 +204,14 @@ function testPasswordCss(passwd)
 		if(intScore == -1)
 		{
 			strVerdict = description[5];
-			password_input_box.style.backgroundImage = "";
+			password_input_box.style.backgroundPosition = "0 0";
 			document.getElementById("meterEmpty").style.width= "100%";
 			document.getElementById("meterFull").style.width= "0";
 		}
 		else if(intScore > -1 && intScore < 16)
 		{
 			strVerdict = description[0];
+			password_input_box.style.backgroundPosition = "0 -100px";
 			checkmark.style.display = "none";
 			document.getElementById("meterEmpty").style.width= "100%";
 			document.getElementById("meterFull").style.width= "0%";
@@ -221,7 +219,7 @@ function testPasswordCss(passwd)
 		else if (intScore > 15 && intScore < 25)
 		{
 			strVerdict = description[1];
-			password_input_box.style.backgroundPosition = "0 -100px";
+			password_input_box.style.backgroundPosition = "0 -200px";
 			checkmark.style.display = "none";
 			document.getElementById("meterEmpty").style.width= "100%";
 			document.getElementById("meterFull").style.width= "25%";
@@ -229,7 +227,7 @@ function testPasswordCss(passwd)
 		else if (intScore > 24 && intScore < 35)
 		{
 			strVerdict = description[2];
-			password_input_box.style.backgroundPosition = "0 -200px";
+			password_input_box.style.backgroundPosition = "0 -300px";
 			checkmark.style.display = "none";
 			document.getElementById("meterEmpty").style.width= "100%";
 			document.getElementById("meterFull").style.width= "50%";
@@ -237,7 +235,7 @@ function testPasswordCss(passwd)
 		else if (intScore > 34 && intScore < 45)
 		{
 			strVerdict = description[3];
-			password_input_box.style.backgroundPosition = "0 -300px";
+			password_input_box.style.backgroundPosition = "0 -400px";
 			checkmark.style.display = "block";
 			document.getElementById("meterEmpty").style.width= "100%";
 			document.getElementById("meterFull").style.width= "75%";
