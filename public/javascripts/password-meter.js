@@ -118,6 +118,12 @@ function testPasswordCss(passwd)
 		var intScore   = 0
 		var strVerdict = 0
 		
+		var password_input_box = document.getElementById("password");
+		password_input_box.style.backgroundImage = "url('/images/meter_input_sprite.png')";
+		password_input_box.style.backgroundPosition = "0 0";
+		
+		var checkmark = document.getElementById("checkmark");
+		
 		// PASSWORD LENGTH
 		if (passwd.length==0 || !passwd.length)                         // length 0
 		{
@@ -170,7 +176,7 @@ function testPasswordCss(passwd)
 			intScore = (intScore+5)
 		}
 		
-																 // [verified] at least two special characters
+																 														// [verified] at least two special characters
 		if (passwd.match(/(.*[!,@,#,$,%,^,&,*,?,_,~].*[!,@,#,$,%,^,&,*,?,_,~])/))
 		{
 			intScore = (intScore+5)
@@ -188,7 +194,7 @@ function testPasswordCss(passwd)
                 intScore = (intScore+2)
         }
 
-																  // [verified] letters, numbers, and special characters
+																  																// [verified] letters, numbers, and special characters
 		if (passwd.match(/([a-zA-Z0-9].*[!,@,#,$,%,^,&,*,?,_,~])|([!,@,#,$,%,^,&,*,?,_,~].*[a-zA-Z0-9])/))
 		{
 			intScore = (intScore+2)
@@ -197,42 +203,51 @@ function testPasswordCss(passwd)
 	
 //if you don't want to prevent submission of weak passwords you can comment out
 //		   document.getElementById("formSubmit").disabled = true;
-	
+		
 		if(intScore == -1)
 		{
-		   strVerdict = description[5];
-		   document.getElementById("meterEmpty").style.width= "100%";
-   		   document.getElementById("meterFull").style.width= "0";
+			strVerdict = description[5];
+			password_input_box.style.backgroundImage = "";
+			document.getElementById("meterEmpty").style.width= "100%";
+			document.getElementById("meterFull").style.width= "0";
 		}
 		else if(intScore > -1 && intScore < 16)
 		{
-		   strVerdict = description[0];
-		   document.getElementById("meterEmpty").style.width= "100%";
-   		   document.getElementById("meterFull").style.width= "0%";
+			strVerdict = description[0];
+			checkmark.style.display = "none";
+			document.getElementById("meterEmpty").style.width= "100%";
+			document.getElementById("meterFull").style.width= "0%";
 		}
 		else if (intScore > 15 && intScore < 25)
 		{
-		   strVerdict = description[1];
-		   document.getElementById("meterEmpty").style.width= "100%";
-   		   document.getElementById("meterFull").style.width= "25%";
+			strVerdict = description[1];
+			password_input_box.style.backgroundPosition = "0 -100px";
+			checkmark.style.display = "none";
+			document.getElementById("meterEmpty").style.width= "100%";
+			document.getElementById("meterFull").style.width= "25%";
 		}
 		else if (intScore > 24 && intScore < 35)
 		{
-		   strVerdict = description[2];
-		  document.getElementById("meterEmpty").style.width= "100%";
-   		  document.getElementById("meterFull").style.width= "50%";
+			strVerdict = description[2];
+			password_input_box.style.backgroundPosition = "0 -200px";
+			checkmark.style.display = "none";
+			document.getElementById("meterEmpty").style.width= "100%";
+			document.getElementById("meterFull").style.width= "50%";
 		}
 		else if (intScore > 34 && intScore < 45)
 		{
-		   strVerdict = description[3];
-		   document.getElementById("meterEmpty").style.width= "100%";
-   		   document.getElementById("meterFull").style.width= "75%";
+			strVerdict = description[3];
+			password_input_box.style.backgroundPosition = "0 -300px";
+			checkmark.style.display = "block";
+			document.getElementById("meterEmpty").style.width= "100%";
+			document.getElementById("meterFull").style.width= "75%";
 		}
 		else
 		{
-		   strVerdict = description[4];
-		   document.getElementById("meterEmpty").style.width= "100%";
-   		   document.getElementById("meterFull").style.width= "100%";
+			strVerdict = description[4];
+			checkmark.style.display = "block";
+			document.getElementById("meterEmpty").style.width= "100%";
+			document.getElementById("meterFull").style.width= "100%";
 		}
 	
 	document.getElementById("Words").innerHTML= (strVerdict);

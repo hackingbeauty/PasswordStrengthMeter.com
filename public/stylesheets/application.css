@@ -9,12 +9,9 @@ body {
 	border:5px solid #85b3e6;
 	-moz-border-radius:10px;
 	-webkit-border-radius:5px;
-/*	background-color:#1e9fec;
-*/	
-/*	background-color:#ad0091;
-*/
+	position:relative;
 	background:#f2b614;
-	padding:2em 0;
+	padding:2em 0 2em 0;
 }
 
 form {
@@ -22,21 +19,17 @@ form {
 	margin:0 auto;
 }
 
-input {
+input#password {
   border:2px solid #d9a311 !important;
   color: #404048;
   display: block;
   font-size: 3.8em;
   margin-bottom: 0.8em;
-  padding: 0.2em; 
+  padding: 0.2em 0.2em 0.3em 0.2em; 
 	width:628px;
 }
 
 label {
-/*	color:#404048;
-*/
-/*  color:#47e74e;	
-*/	
 	color:white;
 	display:block;
 	font-size:3em;
@@ -45,4 +38,19 @@ label {
 
 #pwdTest {
 	font-size:2em;
+}
+
+#Words {
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+#checkmark{
+	display:none;
+	width:80px;
+	height:78px;
+	position:absolute;
+	right:4em;
+	top:8.4em;
+	background: url('/images/checkmark.png') 0 0 no-repeat;
 }
